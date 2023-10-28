@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curds</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="cruds">
+        <div class="head">
+            <h2>cruds</h2>
+            <p> create read update delet search</p>
+        </div>
+        <div class="input">
+            <input type="text" placeholder="title" id="title">
+
+            <div class="price-input">
+            <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+            <input onkeyup="getTotal()"type="number" placeholder="taxes" id="taxes">
+            <input onkeyup="getTotal()"type="number" placeholder="ads" id="ads">
+            <input onkeyup="getTotal()"type="number" placeholder="discount" id="discount">
+            <small id="total"></small>
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category">
+            </div>
+            <button id="submit">create</button>
+        </div>
+        <div class="output">
+            <div class="searchBlock">
+                <input onkeyup="searchData(this.value)" type="text" placeholder="search" id="search">
+                <div class="btnSearch">
+                    <button onclick="searchBy(this.id)" id="searchTitle">search by title</button>
+                    <button onclick="searchBy(this.id)" id="searchcategory">search by category</button>
+                </div>
+            </div>
+            <div id="deleteAll"></div>
+            <table>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>count</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+                
+        </div>
+        </div>
+    <script src="main.js"></script>
+</body>
+</html>
